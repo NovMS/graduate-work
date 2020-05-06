@@ -7,16 +7,19 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './components/app';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+
 import { StylesProvider } from '@material-ui/core/styles';
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   palette: {
     primary: {
       main: '#1976d2'
     }
   }
 });
+
+theme = responsiveFontSizes(theme);
 
 import store from './store';
 

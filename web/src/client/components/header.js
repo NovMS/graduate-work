@@ -2,6 +2,8 @@ import React from 'react';
 import { Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
+import logoImg from './../images/logo.png'
+
 const Root = styled.header`
   display: flex;
   justify-content: flex-start;
@@ -22,23 +24,27 @@ const Name = styled.div`
   left: 30px;
 `;
 
-const ShortName = styled(Typography)`
-  font-size: 30px;
-  font-weight: bold;
+const Logo = styled.div`
+  background-image: url(${logoImg});
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
 `;
 
 const FullName = styled(Typography)`
-  margin-top: 2px;
   font-size: 12px;
-  line-height: 13px;
-  margin-left: 3px;
+  border-left: 1px solid white;
+  padding-left: 5px;
+  line-height: 12px;
+  margin-left: 5px;
 `;
 
 const Header = ({ page }) => {
   return (
     <Root>
       <Name>
-        <ShortName>АРСВ</ShortName>
+        <Logo></Logo>
         <FullName>Аэродинамический расчет<br/>систем вентиляции</FullName>
       </Name>
     </Root>

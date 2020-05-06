@@ -1,6 +1,8 @@
+import updateSettings from './settings';
+
 const reducer = (state, action) => {
   return {
-    state: null
+    settings: updateSettings(state, action)
   };
 };
 

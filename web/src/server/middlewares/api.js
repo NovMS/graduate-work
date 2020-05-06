@@ -1,8 +1,8 @@
 module.exports = function setup(app) {
 
-  app.get('/api/getDataForChart', async (req, res) => {
-    const getDataForChart = require('./requests/getDataForChart');
-    const data = await getDataForChart(req, res);
+  app.post('/api/getResultTable', async (req, res) => {
+    const getResultTable = require('./requests/getResultTable');
+    const data = await getResultTable(req, res);
     res.send(data);
   });
 };
